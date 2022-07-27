@@ -23,10 +23,14 @@ import NxCloud from './icons/nx-cloud.svg';
 import GitHub from './icons/github.svg';
 import Terminal from './icons/terminal.svg';
 import Heart from './icons/heart.svg';
+import { TestClass } from '@nx-test-workspace/react-test-lib';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
+
+  const test: TestClass = new TestClass('foo bar');
+  const fooBar: string = test.getTest();
 
   return (
     <>
@@ -43,6 +47,7 @@ export const App = () => {
             <Text style={styles.textLg}>Hello there,</Text>
             <Text style={[styles.textXL, styles.appTitleText]} testID="heading">
               Welcome ReactTestApp 👋
+              {fooBar}
             </Text>
           </View>
           <View style={styles.section}>

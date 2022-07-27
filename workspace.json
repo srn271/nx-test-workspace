@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "react-test-app": "apps/react-test-app",
-    "react-test-app-e2e": "apps/react-test-app-e2e"
+    "react-test-app-e2e": "apps/react-test-app-e2e",
+    "react-test-lib": "libs/react-test-lib"
   }
 }
